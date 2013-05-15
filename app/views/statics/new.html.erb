@@ -1,0 +1,14 @@
+<h1>New Post</h1>
+<%= form_for @static do |f| %>
+<p>
+	标题:
+	<%= f.text_field :title %>
+</p>
+<p>
+	内容：<br />
+	<%= f.text_area :content %>
+</p>
+<p>
+	<%=submit_tag("保存")%>
+</p>
+<% end %>

@@ -1,0 +1,9 @@
+<% if @static %>
+<%= @static.content %>
+<% else %>
+<% @statics.each do |static| %>
+	<br>
+	<%= link_to static.title, show_static_path(static) %>
+<% end  %>
+	
+<% end %>
