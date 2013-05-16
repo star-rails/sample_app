@@ -1,18 +1,20 @@
 <h1>用户登录</h1>
 <b>请输入您的登录信息</b><br>
 <%= form_for @session do |f| %>
-<p>
-	<%=f.label("邮箱:")  %>
-	<%=f.text_field :email %>
-</p><br/>
-<p>
-	<%=f.label("密码:")  %>
-	<%=f.password_field :password %>
-</p><br/>
-<p>
-	<%=f.submit("登录:") %>	
-</p><br/>
-<p>New user? <%= link_to "注册帐号", new_user_path %></p>
+<%= render 'shared/error_messages' %>
+
+    <p>
+	    <%=f.label("邮箱:")  %>
+	    <%=f.text_field :email %>
+        </p><br/>
+    <p>
+	    <%=f.label("密码:")  %>
+	    <%=f.password_field :password %>
+        </p><br/>
+    <p>
+	    <%=f.submit("登录:") %>	
+        </p><br/>
+    <p>New user? <%= link_to "注册帐号", new_user_path %></p>
 <% end %>
 
 
