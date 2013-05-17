@@ -1,8 +1,13 @@
 <h1>All User</h1>
+<%= paginate @users %>
+<%= @users.total_pages %>
 <ul class="users">
-  <% @user.each do |user| %>
+  <% @users.each do |user| %>
     <li>
       <%= link_to user.name, user %>
     </li>
 <% end %>
 </ul>
+
+<%= paginate @users, :prev_label =>'上一页', :next_label => '下一页' %>
+

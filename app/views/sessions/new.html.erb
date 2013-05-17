@@ -2,7 +2,6 @@
 <b>请输入您的登录信息</b><br>
 <%= form_for @session do |f| %>
 <%= render 'shared/error_messages' %>
-
     <p>
 	    <%=f.label("邮箱:")  %>
 	    <%=f.text_field :email %>
